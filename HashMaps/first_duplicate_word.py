@@ -1,14 +1,12 @@
- Problem Statement : Given a string find the first duplicate word,
- example string: “this is just a wonder, wonder why do I have this in mind”
+ #Problem Statement : Given a string find the first duplicate word,
+ #example string: “this is just a wonder, wonder why do I have this in mind”
  
  
  
- - The right data-structure to check for existence : 
-  set in Python (order in not preserved)
+ #- The right data-structure to check for existence : 
+ # set in Python (order in not preserved) -- NOT HashMap
   
 
-```
-string = "this is just a wonder, wonder why do I have this in mind"
 def firstduplicate(string: str) -> str:
     import re
     cleanStr = re.sub("[^a-zA-Z -]", "", string)
@@ -21,6 +19,8 @@ def firstduplicate(string: str) -> str:
         else: 
             seen_words.add(word)
     return None
+   
+string =  "this is just a wonder, wonder why do I have this in mind"
 firstduplicate(string)
 
-```
+
