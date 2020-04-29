@@ -25,11 +25,8 @@ class Graph:
 	
 	def add_edge(self, u, v):
 		if u in self.vertices and v in self.vertices:
-			for key, value in self.vertices.items():
-				if key == u:
-					value.add_neighbor(v)
-				if key == v:
-					value.add_neighbor(u)
+			self.vertices[u].add_neighbor(v)
+			self.vertices[v].add_neighbor(u)
 			return True
 		else:
 			return False
